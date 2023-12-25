@@ -1,0 +1,78 @@
+/* TaskList.css */
+body {
+  background-color: #87ceeb; /* Sky Blue */
+}
+
+.task-options {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.tridot-cell {
+  position: relative;
+}
+
+.tridot {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tridot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 3px;
+  background-color: #4682b4; /* Steel Blue */
+}
+
+.tridot-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #f0f8ff; /* Alice Blue */
+  border: 1px solid #4682b4; /* Steel Blue */
+  padding: 5px;
+  display: none;
+}
+
+.tridot:hover + .tridot-options {
+  display: block;
+}
+
+.tridot-options button {
+  display: block;
+  margin-bottom: 5px;
+  background-color: #4682b4; /* Steel Blue */
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #f0f8ff; /* Alice Blue */
+}
+
+.task-table th,
+.task-table td {
+  border: 1px solid #87ceeb; /* Sky Blue */
+  padding: 12px;
+  text-align: left;
+}
+
+.task-table th {
+  background-color: #87cefa; /* Light Sky Blue */
+}
